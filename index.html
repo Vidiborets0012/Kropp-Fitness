@@ -9,54 +9,45 @@
   </head>
   <body>
     <header class="header">
-      <a class="header__logo" href="/">
-        <img
-          class="header__logo-img"
-          src="images/logo.png"
-          alt="Kropp Logo"
-          width="135"
-          height="25"
-          loading="lazy"
-        />
-      </a>
-      <nav class="menu header-menu">
-        <ul class="header-menu__list">
-          <li class="header-menu__item">
-            <a class="header-menu__link is-current" href="#">Home</a>
-          </li>
-          <li class="header-menu__item">
-            <a class="header-menu__link" href="#">Pages</a>
-          </li>
-          <li class="header-menu__item">
-            <a class="header-menu__link" href="#">Portfolio</a>
-          </li>
-          <li class="header-menu__item">
-            <a class="header-menu__link" href="#">Blog</a>
-          </li>
-          <li class="header-menu__item">
-            <a class="header-menu__link" href="#">Shop</a>
-          </li>
-        </ul>
+      <div class="header__inner">
+        <a class="header__logo" href="/">
+          <img
+            class="header__logo-img"
+            src="images/logo.png"
+            alt="Kropp Logo"
+            width="135"
+            height="25"
+            loading="lazy"
+          />
+        </a>
+        <nav class="menu header-menu">
+          <ul class="header-menu__list">
+            <li class="header-menu__item">
+              <a class="header-menu__link is-current" href="#">Home</a>
+            </li>
+            <li class="header-menu__item">
+              <a class="header-menu__link" href="#">Pages</a>
+            </li>
+            <li class="header-menu__item">
+              <a class="header-menu__link" href="#">Portfolio</a>
+            </li>
+            <li class="header-menu__item">
+              <a class="header-menu__link" href="#">Blog</a>
+            </li>
+            <li class="header-menu__item">
+              <a class="header-menu__link" href="#">Shop</a>
+            </li>
+          </ul>
+        </nav>
         <div class="header__actions">
           <button class="header__actions-button button" type="button">Book now</button>
-          <button class="header__actions-burger-button" type="button">
-            <svg
-              width="23"
-              height="12"
-              viewBox="0 0 23 12"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M0.5 1H22.5" stroke="white" stroke-dasharray="22 22" />
-              <path d="M0.5 1H22.5" stroke="white" stroke-dasharray="22 22" />
-              <path d="M0.5 6H22.5" stroke="white" stroke-dasharray="22 22" />
-              <path d="M0.5 6H22.5" stroke="white" stroke-dasharray="22 22" />
-              <path d="M0.5 11H22.5" stroke="white" stroke-dasharray="22 22" />
-              <path d="M0.5 11H22.5" stroke="white" stroke-dasharray="22 22" />
-            </svg>
+          <button class="header__actions-burger-button burger-button" type="button">
+            <span class="burger-button__bar"></span>
+            <span class="burger-button__bar"></span>
+            <span class="burger-button__bar"></span>
           </button>
         </div>
-      </nav>
+      </div>
     </header>
 
     <script src="js/main.js"></script>
