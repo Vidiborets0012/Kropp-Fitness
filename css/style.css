@@ -113,7 +113,7 @@ a:hover {
   text-transform: uppercase;
   background-color: var(--color-light);
   border: none;
-  border-radius: 50%;
+  border-radius: var(--border-radius);
 }
 
 .button:hover {
@@ -181,7 +181,7 @@ a:hover {
   color: var(--color-light);
   background-color: transparent;
   border: var(--border);
-  border-radius: var(--border-radius);
+  border-radius: 50%;
 }
 
 .burger-button:hover {
@@ -194,6 +194,82 @@ a:hover {
   inline-size: 6px;
   background-color: currentColor;
   box-shadow: 16px 0 0 currentColor;
+}
+
+/* *********** BANNER *********** */
+
+.banner {
+  padding-block: 36px;
+  color: var(--color-light);
+  background-color: var(--color-dark-alternate);
+  text-transform: uppercase;
+}
+
+.banner__info-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  min-block-size: calc(100vh - 162px); /* 90 + 36 + 36 */
+  max-width: 2060px;
+  padding-inline-start: 70px;
+  padding-inline-end: 70px;
+}
+
+.banner__info {
+  display: flex;
+  align-items: end;
+  font-weight: 700;
+  /* font-size: 30px; */
+  font-size: clamp(16px, 2.78vw, 30px); /* 30/1080*100=2.777777 */
+  line-height: 1.3;
+}
+
+.banner__info::before {
+  content: '';
+  /* width: 194px; */
+  width: min(17.96vw, 194px); /* 194/1080*100=17.96 */
+
+  aspect-ratio: 1;
+  margin-right: 30px;
+  background-image: url('../icons/bold-arrow-down-right.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.banner__title {
+  font-weight: 700;
+  /* font-size: 360px;  */
+  /* font-size: min(18.75vw, 360px); */ /* 360/1920*100=18.75 */
+  font-size: min(17.47vw, 360px); /* 360/1080*100=17.47 */
+  line-height: 1;
+}
+
+.swiper-pagination-bullet {
+  width: 14px;
+  height: 14px;
+  border: 1px solid var(--color-light);
+  opacity: 1;
+  transition: border-color var(--transition-duration);
+}
+
+.swiper-pagination-bullet:not(.swiper-pagination-bullet-active):hover {
+  border-color: var(--color-light-gray);
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--color-light);
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 7px;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: -8px;
 }
 
 @media (max-width: 1039.98px) {
