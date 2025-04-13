@@ -227,8 +227,8 @@ a:hover {
 .banner__info::before {
   content: '';
   /* width: 194px; */
-  width: min(17.96vw, 194px); /* 194/1080*100=17.96 */
-
+  /* width: min(17.96vw, 194px); 194/1080*100=17.96 */
+  width: clamp(60px, 17.96vw, 194px);
   aspect-ratio: 1;
   margin-right: 30px;
   background-image: url('../icons/bold-arrow-down-right.svg');
@@ -273,7 +273,8 @@ a:hover {
 }
 
 @media (max-width: 1039.98px) {
-  .header__inner {
+  .header__inner,
+  .banner__info-inner {
     padding-inline: 15px;
   }
 
@@ -284,6 +285,14 @@ a:hover {
 
   .header-menu__list {
     justify-content: center;
+  }
+
+  .banner__slider {
+    padding-block-end: 20px;
+  }
+
+  .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 14px;
   }
 }
 
@@ -303,6 +312,18 @@ a:hover {
 
   .header__actions {
     column-gap: 16px;
+  }
+
+  .banner__info-inner {
+    padding-inline: 8px;
+  }
+
+  .banner__info::before {
+    margin-right: 10px;
+  }
+
+  .banner__info-inner {
+    row-gap: 5px;
   }
 }
 
