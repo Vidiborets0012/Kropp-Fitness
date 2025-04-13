@@ -101,7 +101,7 @@ a:hover {
 }
 
 .title-medium {
-  font-size: 40px;
+  font-size: clamp(20px, 2.08vw, 40px); /* 40/1920*100=2.08 */
   line-height: 1.3;
   text-transform: uppercase;
   color: var(--color-light);
@@ -372,11 +372,17 @@ a:hover {
 }
 
 .card-motivation__dwscription {
-  min-width: 400px;
+  max-width: 400px;
 }
 
 .card-motivation__dwscription:not(:last-child) {
   margin-bottom: 37px;
+}
+
+@media (max-width: 1919.98px) {
+  .card-motivation__image {
+    margin-block: -20px;
+  }
 }
 
 @media (max-width: 1039.98px) {
@@ -400,6 +406,16 @@ a:hover {
 
   .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
     margin: 0 14px;
+  }
+
+  .card-motivation {
+    padding-block: 50px;
+  }
+
+  .card-motivation__image {
+    max-width: 30%;
+    height: auto;
+    margin-block: 0;
   }
 }
 
@@ -431,6 +447,26 @@ a:hover {
 
   .banner__info-inner {
     row-gap: 5px;
+  }
+
+  .card-motivation,
+  .motivation__item:nth-child(even) .motivation__card {
+    flex-direction: column-reverse;
+  }
+
+  .card-motivation__image {
+    max-width: 60%;
+    height: auto;
+    margin-block: 0;
+  }
+
+  .card-motivation {
+    row-gap: 30px;
+    padding-block: 30px;
+  }
+
+  .card-motivation__dwscription:not(:last-child) {
+    margin-bottom: 20px;
   }
 }
 
