@@ -417,6 +417,64 @@ a:hover {
   font-size: 16px;
 }
 
+/* *********** JOIN-US *********** */
+
+.join-us__video-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 150px 30px;
+  background: url('../images/join-us-bg.jpg') var(--color-dark-alternate);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.join-us__btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 4px;
+
+  width: 200px;
+  aspect-ratio: 1;
+
+  border: var(--border);
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+
+  color: var(--color-light);
+  background-color: transparent;
+}
+
+.join-us__btn::after {
+  content: '';
+  width: 26px;
+  aspect-ratio: 1;
+  background-image: url('../images/icons/arrow-top-right.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition-duration: var(--transition-duration);
+}
+
+.join-us__btn:hover {
+  color: var(--color-dark);
+  background-color: var(--color-light-gray);
+}
+
+.join-us__btn:hover::after {
+  filter: invert(1);
+}
+
 @media (max-width: 1919.98px) {
   .card-motivation__image {
     margin-block: -20px;
