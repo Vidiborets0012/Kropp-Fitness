@@ -460,6 +460,12 @@ a:hover {
   background-size: cover;
 }
 
+.join-us__video {
+  width: 100%;
+  max-width: 960px;
+  height: auto;
+}
+
 .join-us__btn {
   position: absolute;
   top: 50%;
@@ -558,6 +564,7 @@ a:hover {
   line-height: 1.65;
   text-transform: uppercase;
   color: var(--color-light);
+  text-align: center;
 }
 
 .join-us__form-input {
@@ -613,6 +620,14 @@ a:hover {
     max-width: 30%;
     height: auto;
     margin-block: 0;
+  }
+
+  .join-us__form-body {
+    padding-bottom: 80px;
+  }
+
+  .join-us__title:not(:last-child) {
+    margin-bottom: 80px;
   }
 }
 
@@ -679,6 +694,24 @@ a:hover {
 
   .training-tipes__image {
     max-width: 120px;
+  }
+
+  .join-us__btn {
+    width: 140px;
+  }
+
+  .join-us__title:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  .join-us__form-subtitle {
+    font-size: 16px;
+  }
+
+  .join-us__form-body {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
   }
 }
 
