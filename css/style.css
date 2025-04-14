@@ -80,6 +80,7 @@ h5,
 h6 {
   font-weight: 700;
   text-transform: uppercase;
+  color: var(--color-light);
 }
 
 a,
@@ -377,6 +378,43 @@ a:hover {
 
 .card-motivation__dwscription:not(:last-child) {
   margin-bottom: 37px;
+}
+
+/* *********** TRAINING-TIPES *********** */
+.training-tipes__inner {
+  max-width: 1920px;
+  margin-inline: auto;
+  padding-top: 70px;
+  padding-bottom: 120px;
+}
+
+.training-tipes__image {
+  width: 150px;
+  height: 140px;
+}
+
+.training-tipes__list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 60px;
+}
+
+.training-tipes__item {
+  --trainingTypesItemIconSize: 80px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 32px;
+  padding-top: var(--trainingTypesItemIconSize);
+  background-image: url('../images/icons/transparent-arrow-down-left.svg');
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-size: var(--trainingTypesItemIconSize);
+}
+
+.training-tipes__title {
+  font-size: 16px;
 }
 
 @media (max-width: 1919.98px) {
