@@ -409,7 +409,7 @@ a:hover {
   padding-top: var(--trainingTypesItemIconSize);
   background-image: url('../images/icons/transparent-arrow-down-left.svg');
   background-repeat: no-repeat;
-  background-position: 100% 100%;
+  background-position: 100% 0;
   background-size: var(--trainingTypesItemIconSize);
 }
 
@@ -420,6 +420,12 @@ a:hover {
 @media (max-width: 1919.98px) {
   .card-motivation__image {
     margin-block: -20px;
+  }
+}
+
+@media (max-width: 1279.98px) {
+  .training-tipes__list {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -505,6 +511,21 @@ a:hover {
 
   .card-motivation__dwscription:not(:last-child) {
     margin-bottom: 20px;
+  }
+
+  .training-tipes__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .training-tipes__item {
+    --trainingTypesItemIconSize: 50px;
+
+    row-gap: 10px;
+  }
+
+  .training-tipes__image {
+    max-width: 120px;
   }
 }
 
