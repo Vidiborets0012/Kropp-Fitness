@@ -58,6 +58,11 @@ body {
   padding-inline: var(--container-padding-x);
 }
 
+.container-wide {
+  max-width: 1920px;
+  margin-inline: auto;
+}
+
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -396,6 +401,7 @@ a:hover {
   left: -0.6em;
   font-family: var(--font-family-accent);
   font-size: 2.8em; /* 112/40 */
+  line-height: 1;
   color: transparent;
   -webkit-text-stroke: 1px var(--color-light-gray);
   /* text-stroke: 1px var(--color-light-gray); */
@@ -411,8 +417,6 @@ a:hover {
 
 /* *********** TRAINING-TIPES *********** */
 .training-tipes__inner {
-  max-width: 1920px;
-  margin-inline: auto;
   padding-top: 70px;
   padding-bottom: 120px;
 }
@@ -579,6 +583,39 @@ a:hover {
   display: flex;
   justify-content: center;
   column-gap: 20px;
+}
+
+/* *********** LOCATION *********** */
+.location {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.location__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 15px;
+  text-align: center;
+}
+
+.location__body-title.backdrop-title--centered::after {
+  left: 50%;
+  top: -0.2em;
+  transform: translateX(-50%);
+}
+
+.location__body-title:not(:last-child) {
+  margin-bottom: 14px;
+}
+
+.location__description {
+  max-width: 490px;
+}
+
+.location__description:not(:last-child) {
+  margin-bottom: 37px;
 }
 
 @media (max-width: 1919.98px) {
