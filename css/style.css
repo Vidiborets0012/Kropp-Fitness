@@ -401,11 +401,11 @@ a:hover {
   /* text-stroke: 1px var(--color-light-gray); */
 }
 
-.card-motivation__dwscription {
+.card-motivation__description {
   max-width: 400px;
 }
 
-.card-motivation__dwscription:not(:last-child) {
+.card-motivation__description:not(:last-child) {
   margin-bottom: 37px;
 }
 
@@ -447,6 +447,10 @@ a:hover {
 }
 
 /* *********** JOIN-US *********** */
+
+.join-us {
+  background-color: var(--color-dark-alternate);
+}
 
 .join-us__video-wrapper {
   position: relative;
@@ -677,7 +681,7 @@ a:hover {
     padding-block: 30px;
   }
 
-  .card-motivation__dwscription:not(:last-child) {
+  .card-motivation__description:not(:last-child) {
     margin-bottom: 20px;
   }
 
