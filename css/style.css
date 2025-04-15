@@ -647,6 +647,7 @@ a:hover {
 }
 
 .family__body-image {
+  width: 100%;
   scroll-snap-align: start;
 }
 
@@ -709,6 +710,10 @@ a:hover {
 
   .join-us__title:not(:last-child) {
     margin-bottom: 80px;
+  }
+
+  .family__body-image {
+    height: 360px;
   }
 }
 
@@ -801,6 +806,19 @@ a:hover {
 
   .location__description:not(:last-child) {
     margin-bottom: 20px;
+  }
+
+  .family__header {
+    padding-top: 80px;
+    padding-bottom: 50px;
+  }
+
+  .family__body {
+    column-gap: 12px;
+  }
+
+  .family__body-image {
+    height: 180px;
   }
 }
 
