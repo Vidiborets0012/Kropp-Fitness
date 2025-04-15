@@ -215,7 +215,8 @@ a:hover {
   border-radius: var(--border-radius);
 }
 
-.input::placeholder {
+.input::placeholder,
+select.input:invalid {
   color: var(--color-light-gray);
 }
 
@@ -227,6 +228,20 @@ a:hover {
   color: var(--color-dark-gray);
   background-color: var(--color-light-gray);
   outline: none;
+}
+
+select.input:focus {
+  background-color: transparent;
+}
+
+option {
+  background-color: var(--color-dark-gray); /* Замініть на потрібний колір фону опцій */
+  color: var(--color-light-gray); /* Замініть на потрібний колір тексту опцій */
+}
+
+option:checked {
+  background-color: var(--color-dark-alternate); /* Колір фону вибраної опції */
+  color: var(--color-light); /* Колір тексту вибраної опції */
 }
 
 .header__inner {
@@ -649,6 +664,63 @@ a:hover {
 .family__body-image {
   width: 100%;
   scroll-snap-align: start;
+}
+
+/* *********** CALCULATE *********** */
+
+.calculate {
+  padding-block: 146px;
+  background-color: var(--color-dark-alternate);
+}
+
+.calculate__inner {
+  display: flex;
+  align-items: center;
+  column-gap: 36px;
+}
+
+.calculate__body {
+  flex-grow: 1;
+  max-width: 627px;
+}
+
+.calculate__title:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.calculate__description {
+  max-width: 385px;
+  line-height: 1.75;
+  letter-spacing: 0.05em;
+  color: var(--color-light-gray);
+}
+
+.calculate__description:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.calculate__form-body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px 30px;
+}
+
+.calculate__form-body:not(:last-child) {
+  margin-bottom: 26px;
+}
+
+.calculate__input.wide {
+  grid-column: -1/1;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
 }
 
 @media (max-width: 1919.98px) {

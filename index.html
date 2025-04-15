@@ -362,7 +362,7 @@
               <h2 class="calculate__title title-medium backdrop-title" data-title="bmi">
                 Input your BMI
               </h2>
-              <div class="calculate__description section-description">
+              <div class="calculate__description">
                 <p>
                   Duo graece ponderum ne, ei mel aliquando. Pro te tamquam nonumes, nam no nemore
                   epicurei
@@ -388,14 +388,14 @@
                   <input class="calculate__input input" id="age" type="number" placeholder="Age" />
 
                   <label class="visually-hidden" for="gender">Gender</label>
-                  <select class="calculate__input input" id="gender">
+                  <select class="calculate__input input" id="gender" required>
                     <option value="" disabled selected>Gender</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                   </select>
 
                   <label class="visually-hidden" for="activity-factor">Activity factor</label>
-                  <select class="calculate__input input wide" id="activity-factor">
+                  <select class="calculate__input input wide" id="activity-factor" required>
                     <option value="" disabled selected>Select an activity factor:</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
