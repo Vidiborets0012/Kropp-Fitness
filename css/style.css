@@ -116,6 +116,13 @@ a:hover {
   line-height: 1.2;
 }
 
+.section-description {
+  font-size: 20px;
+  line-height: 1.65;
+  color: var(--color-light);
+  text-transform: uppercase;
+}
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -550,6 +557,7 @@ a:hover {
   flex-direction: column;
   align-items: center;
   row-gap: 7px;
+  text-align: center;
 }
 
 .join-us__form-header:not(:last-child) {
@@ -564,15 +572,6 @@ a:hover {
   left: 50%;
   top: -0.4em;
   transform: translateX(-50%);
-}
-
-.join-us__form-subtitle {
-  font-weight: 300;
-  font-size: 20px;
-  line-height: 1.65;
-  text-transform: uppercase;
-  color: var(--color-light);
-  text-align: center;
 }
 
 .join-us__form-input {
@@ -616,6 +615,39 @@ a:hover {
 
 .location__description:not(:last-child) {
   margin-bottom: 37px;
+}
+
+/* *********** FAMILY *********** */
+.family {
+  background-color: var(--color-dark-alternate);
+}
+
+.family__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 7px;
+  padding-top: 132px;
+  padding-bottom: 62px;
+  text-align: center;
+}
+
+.family__header-title.backdrop-title--centered::after {
+  left: 50%;
+  top: -0.3em;
+  transform: translateX(-50%);
+}
+
+.family__body {
+  display: flex;
+  justify-content: center;
+  column-gap: 26px;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+}
+
+.family__body-image {
+  scroll-snap-align: start;
 }
 
 @media (max-width: 1919.98px) {
