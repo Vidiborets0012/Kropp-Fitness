@@ -705,9 +705,12 @@ option:checked {
   color: var(--color-light-gray);
 }
 
-.calculate__description:not(:last-child) {
+.calculate__body-inner {
   margin-bottom: 30px;
 }
+/* .calculate__description:not(:last-child) {
+  margin-bottom: 30px;
+} */
 
 .calculate__form-body {
   display: grid;
@@ -811,6 +814,12 @@ b {
   }
 }
 
+@media (max-width: 1419.98px) {
+  .calculate__body-inner {
+    padding-left: 35px;
+  }
+}
+
 @media (max-width: 1279.98px) {
   .training-tipes__list {
     grid-template-columns: repeat(3, 1fr);
@@ -868,6 +877,30 @@ b {
 
   .family__body-image {
     height: 360px;
+  }
+
+  .calculate {
+    padding-block: 100px;
+  }
+
+  .calculate__inner {
+    column-gap: 20px;
+  }
+
+  .calculate__form-body {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .calculate__button {
+    width: 100%;
+  }
+
+  .calculate__table :is(td, th) {
+    padding-block: 10px;
+  }
+
+  .calculate__table tfoot td {
+    padding-top: 10px;
   }
 }
 
@@ -973,6 +1006,19 @@ b {
 
   .family__body-image {
     height: 180px;
+  }
+
+  .calculate__inner {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+
+  .calculate__table-wrapper::before {
+    display: none;
+  }
+
+  .calculate {
+    padding-block: 60px;
   }
 }
 
